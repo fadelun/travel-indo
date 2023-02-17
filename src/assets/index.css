@@ -5,9 +5,17 @@
 @layer components {
   #app {
     font-family: Poppins, Open-sans, sans-serif;
+  }
+
+  .container {
+    @apply mx-auto;
+  }
+
+  header {
+    @apply relative;
     background: url("./images/background.jpg");
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 500px;
   }
 }
