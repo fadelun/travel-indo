@@ -1,24 +1,17 @@
 <template>
   <Header />
+  <Main />
 </template>
 
 <script>
 import Header from "./views/Header.vue";
+import Main from "./views/Main.vue";
 
 export default {
   name: "App",
   components: {
     Header,
+    Main,
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: Poppins, Open-sans, sans-serif;
-  background: url(./assets/images/background.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-}
-</style>

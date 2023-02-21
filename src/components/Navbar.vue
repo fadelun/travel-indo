@@ -1,6 +1,11 @@
 <template>
-  <nav id="nav-2" class="bg-transparent border-b-2 border-b-white text-white">
-    <div class="flex justify-between h-16 items-center px-16 md:px-24">
+  <nav
+    id="nav-2"
+    class="container mx-auto pt-3 bg-transparent text-white absolute inset-x-0 top-0 z-50"
+  >
+    <div
+      class="flex justify-between h-16 items-center border-b-2 border-b-white"
+    >
       <div class="logo w-24">
         <a href="#"> LOGO </a>
       </div>
@@ -9,7 +14,7 @@
         ><a href="#">Gallery</a>
         <a href="#">Contacts</a>
       </div>
-      <div class="button w-32 grid items-center">
+      <div class="button grid items-center">
         <button>
           <img src="@/assets/icons/search.svg" alt="search-icon" />
         </button>
