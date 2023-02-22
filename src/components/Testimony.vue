@@ -1,9 +1,28 @@
 <template>
   <!-- great testimoni -->
-  <div id="testimony" class="content text-white bg-[#0a060e]">
-    <h2 class="font-extrabold text-6xl">Where Adventure and Relaxation Meet</h2>
-    <p class="font-semibold text-xl">{{ testi[0].quote }}</p>
-    <p class="font-semibold">{{ testi[0].name }}</p>
+  <div id="testimony" class="content text-white">
+    <div class="bg-[#0000007e] pt-16 pb-32 w-full h-full">
+      <div class="container flex gap-x-5">
+        <div class="testimony-text w-1/2">
+          <h2 class="font-extrabold text-6xl mb-10">
+            Where Adventure and Relaxation Meet
+          </h2>
+          <p class="font-medium text-base">"{{ testi[0].quote }}"</p>
+          <p class="font-medium text-base">
+            -<i>{{ testi[0].name }}</i>
+          </p>
+        </div>
+        <div class="testimony-videos w-1/ gap-6 flex items-end">
+          <div class="video w-60">
+            <img src="../assets/images/video.jpg" alt="beautiful beach" />
+          </div>
+
+          <div class="video w-60">
+            <img src="../assets/images/video-2.jpg" alt="bromo mountain" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
