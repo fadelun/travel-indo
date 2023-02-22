@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="h-[92vh]">
     <Navbar />
     <Hero />
   </header>
