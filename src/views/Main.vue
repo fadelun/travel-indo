@@ -1,9 +1,7 @@
 <template>
-  <main class="text-white bg-[#070416] py-24">
-    <div class="container">
-      <Tours />
-      <Testimony />
-    </div>
+  <main class="text-white">
+    <Tours />
+    <Testimony />
   </main>
 </template>
 <script>
