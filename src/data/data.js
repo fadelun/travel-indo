@@ -9,7 +9,7 @@ import bt1 from "../assets/images/bt/img1.jpg"
 import bt2 from "../assets/images/bt/img2.jpg"
 import bt3 from "../assets/images/bt/img3.jpg"
 
-const data = [
+const popularTours = [
     {
         id: 1,
         city: "padang",
@@ -44,4 +44,4 @@ const data = [
     }
 ]
 
-export default data;
+export default popularTours;
