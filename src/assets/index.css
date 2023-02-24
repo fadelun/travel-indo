@@ -32,22 +32,25 @@
     left: 0;
     right: 0;
     bottom: 34rem;
-    /* background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.5074404761904762) 2%,
-      rgba(0, 0, 0, 1) 13%,
-      rgba(0, 0, 0, 1) 86%,
-      rgba(0, 0, 0, 0.48783263305322133) 100%
-    ); */
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0) 0%,
+      rgba(6, 7, 15, 0) 0%,
 
-      rgba(0, 0, 0, 1) 10%,
-      rgba(0, 0, 0, 1) 88%,
+      rgba(6, 7, 15, 1) 10%,
+      rgba(6, 7, 15, 1) 88%,
 
-      rgba(0, 0, 0, 0) 100%
+      rgba(6, 7, 15, 0) 100%
     );
+  }
+
+  main #tours .menu-tour .card-image img {
+    @apply object-center object-cover h-full w-[120%];
+  }
+  main #tours .menu-tour .card {
+    @apply relative w-[260px] h-[360px] rounded-md border-2 shadow-md border-white hover:scale-105 duration-300 ease-in-out overflow-hidden;
+  }
+  main #tours .menu-tour .title {
+    @apply text-center absolute inset-x-0 bottom-0 h-1/5;
   }
 
   main #testimony {

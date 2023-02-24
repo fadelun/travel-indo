@@ -7,25 +7,18 @@
 
       <!-- menu-cards -->
       <ul class="menu-tour flex flex-wrap justify-between">
-        <li
-          v-for="tour in tours"
-          :key="tour"
-          class="card relative w-[260px] h-[340px] rounded-md border-4 border-white hover:scale-105 duration-300 ease-in-out overflow-hidden"
-        >
+        <li v-for="tour in tours" :key="tour" class="card">
           <a href="#">
             <div class="card-image h-full">
               <img
-                :src="require(`@/assets/images/bdg/img1.jpg`)"
-                alt=""
-                srcset=""
+                :src="tour.images[0]"
+                :alt="tour.city"
                 class="object-center object-cover h-full"
               />
             </div>
-            <div
-              class="title text-center absolute inset-x-0 bottom-0 h-1/4 bg-[#0000006c]"
-            >
-              <h3 class="text-xl">{{ tour }}</h3>
-              <p class="text-sm">There will be small text</p>
+            <div class="title">
+              <h3 class="text-xl font-bold uppercase">{{ tour.tours[0] }}</h3>
+              <p class="text-sm capitalize">{{ tour.city }}</p>
             </div>
           </a>
         </li>
@@ -34,17 +27,22 @@
   </div>
 </template>
 <script>
-import { ref, onMounted } from "vue";
-import data from "../data/data.js";
+import { ref, onBeforeMount, onMounted } from "vue";
+import popularTours from "../data/popularTours.js";
 
 export default {
   name: "Tours",
 
   setup() {
-    const tours = ref(["tour 1", "tour 2", "tour 3", "tour 4"]);
+    const tours = ref([]);
 
+    onBeforeMount(() => {
+      popularTours.map((tour) => {
+        tours.value.push(tour);
+      });
+    });
     onMounted(() => {
-      console.log(data);
+      console.log(tours.value[2].city);
     });
     return {
       tours,
