@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  /* body {
+    background-color: #070416;
+  } */
+
   #app {
     font-family: Poppins, Open-sans, sans-serif;
   }
@@ -16,9 +20,38 @@
     background: url("./images/background.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  main {
+    @apply relative;
+  }
+  main #tours .background {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    bottom: 34rem;
+    /* background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5074404761904762) 2%,
+      rgba(0, 0, 0, 1) 13%,
+      rgba(0, 0, 0, 1) 86%,
+      rgba(0, 0, 0, 0.48783263305322133) 100%
+    ); */
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 88%,
+
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 
   main #testimony {
     background: url("./images/background-2.jpg");
+    background-repeat: no-repeat;
   }
 }

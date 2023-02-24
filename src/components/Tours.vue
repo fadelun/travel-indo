@@ -1,7 +1,8 @@
 <template>
   <!-- popular tours -->
-  <div id="tours" class="content bg-[#070416] py-16 min-h-[600px]">
-    <div class="container">
+  <div id="tours" class="content pt-20 pb-28 min-h-[600px]">
+    <div class="background"></div>
+    <div class="container relative">
       <h3 class="font-bold text-4xl mx-auto w-fit mb-12">POPULAR TOURS</h3>
 
       <!-- menu-cards -->
@@ -9,7 +10,7 @@
         <li
           v-for="tour in tours"
           :key="tour"
-          class="card relative w-[260px] h-[340px] rounded-md border-4 border-white hover:scale-105 overflow-hidden"
+          class="card relative w-[260px] h-[340px] rounded-md border-4 border-white hover:scale-105 duration-300 ease-in-out overflow-hidden"
         >
           <a href="#">
             <div class="card-image h-full">

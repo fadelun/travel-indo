@@ -1,7 +1,7 @@
 <template>
   <!-- great testimoni -->
   <div id="testimony" class="content text-white">
-    <div class="bg-[#0000007e] pt-16 pb-32 w-full h-full">
+    <div class="bg-[#00000098] pt-32 pb-32 w-full h-full">
       <div class="container flex gap-x-5">
         <div class="testimony-text w-1/2">
           <h2 class="font-extrabold text-6xl mb-10">
@@ -12,13 +12,28 @@
             -<i>{{ testi[0].name }}</i>
           </p>
         </div>
-        <div class="testimony-videos w-1/ gap-6 flex items-end">
-          <div class="video w-60">
+        <div class="testimony-videos w-1/2 gap-6 flex items-end justify-center">
+          <div
+            class="video w-60 relative hover:scale-110 duration-300 ease-in-out"
+          >
             <img src="../assets/images/video.jpg" alt="beautiful beach" />
+
+            <div
+              class="icon absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-14 h-14 rounded-full border-4 flex justify-center items-center shadow-lg"
+            >
+              <font-awesome-icon icon="fa-solid fa-play" size="xl" />
+            </div>
           </div>
 
-          <div class="video w-60">
+          <div
+            class="video w-60 relative hover:scale-110 duration-300 ease-in-out"
+          >
             <img src="../assets/images/video-2.jpg" alt="bromo mountain" />
+            <div
+              class="icon absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-14 h-14 rounded-full border-4 flex justify-center items-center shadow-lg"
+            >
+              <font-awesome-icon icon="fa-solid fa-play" size="xl" />
+            </div>
           </div>
         </div>
       </div>
@@ -26,11 +41,11 @@
   </div>
 </template>
 <script>
-// import {reactive, toRefs} from "vue";
 import { ref } from "vue";
 
 export default {
   name: "Testimony",
+
   setup() {
     const testi = ref([
       {
