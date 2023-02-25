@@ -1,20 +1,20 @@
 <template>
   <!-- popular tours -->
-  <div id="tours" class="content pt-20 pb-28 min-h-[600px]">
+  <div id="tours" class="content">
     <div class="background"></div>
-    <div class="container relative">
-      <h3 class="font-bold text-4xl mx-auto w-fit mb-12">POPULAR TOURS</h3>
+    <div class="container">
+      <h2>POPULAR TOURS</h2>
 
       <!-- menu-cards -->
       <ul class="menu-tour">
         <li v-for="tour in tours" :key="tour" class="card">
           <a href="#">
-            <div class="card-image h-full">
+            <div class="card-image">
               <img :src="tour.images[0]" :alt="tour.city" />
             </div>
-            <div class="title">
-              <h3 class="text-xl font-bold uppercase">{{ tour.tours[0] }}</h3>
-              <p class="text-sm capitalize">{{ tour.city }}</p>
+            <div class="wrapper-title">
+              <h3 class="title">{{ tour.tours[0] }}</h3>
+              <p class="sub-title">{{ tour.city }}</p>
             </div>
           </a>
         </li>

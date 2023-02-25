@@ -1,37 +1,27 @@
 <template>
   <!-- great testimoni -->
-  <div id="testimony" class="content text-white">
-    <div class="bg-[#00000098] pt-40 pb-36 w-full h-full">
-      <div class="container flex gap-x-5">
-        <div class="testimony-text w-1/2">
-          <h2 class="font-extrabold text-6xl mb-10">
-            Where Adventure and Relaxation Meet
-          </h2>
-          <p class="font-medium text-base">"{{ testi[0].quote }}"</p>
-          <p class="font-medium text-base">
+  <div id="testimony" class="content">
+    <div class="bacgkround">
+      <div class="container">
+        <div class="testimony-text">
+          <h2>Where Adventure and Relaxation Meet</h2>
+          <p class="person-quote">"{{ testi[0].quote }}"</p>
+          <p class="person-name">
             -<i>{{ testi[0].name }}</i>
           </p>
         </div>
-        <div class="testimony-videos w-1/2 gap-6 flex items-end justify-center">
-          <div
-            class="video w-60 relative hover:scale-110 duration-300 ease-in-out"
-          >
+        <div class="testimony-videos">
+          <div class="video">
             <img src="../assets/images/video.jpg" alt="beautiful beach" />
 
-            <div
-              class="icon absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-14 h-14 rounded-full border-4 flex justify-center items-center shadow-lg"
-            >
+            <div class="icon">
               <font-awesome-icon icon="fa-solid fa-play" size="xl" />
             </div>
           </div>
 
-          <div
-            class="video w-60 relative hover:scale-110 duration-300 ease-in-out"
-          >
+          <div class="video">
             <img src="../assets/images/video-2.jpg" alt="bromo mountain" />
-            <div
-              class="icon absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-14 h-14 rounded-full border-4 flex justify-center items-center shadow-lg"
-            >
+            <div class="icon">
               <font-awesome-icon icon="fa-solid fa-play" size="xl" />
             </div>
           </div>
