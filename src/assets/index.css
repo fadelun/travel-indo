@@ -3,16 +3,20 @@
 @tailwind utilities;
 
 @layer components {
-  /* body {
-    background-color: #070416;
-  } */
-
   #app {
     font-family: Poppins, Open-sans, sans-serif;
   }
 
   .container {
     @apply mx-auto;
+  }
+
+  h3 {
+    @apply text-xl font-bold uppercase;
+  }
+
+  .logo {
+    @apply w-24;
   }
 
   header {
@@ -56,5 +60,17 @@
   main #testimony {
     background: url("./images/background-2.jpg");
     background-repeat: no-repeat;
+  }
+
+  footer {
+    @apply h-[400px] bg-[#06070F] text-white;
+  }
+
+  footer .container {
+    @apply flex flex-wrap h-full;
+  }
+
+  footer .container > * {
+    @apply basis-1/4 flex flex-col gap-y-4 justify-center px-6;
   }
 }
