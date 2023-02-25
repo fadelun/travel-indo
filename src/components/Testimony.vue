@@ -1,7 +1,7 @@
 <template>
   <!-- great testimoni -->
   <div id="testimony" class="content text-white">
-    <div class="bg-[#00000098] pt-32 pb-32 w-full h-full">
+    <div class="bg-[#00000098] pt-40 pb-36 w-full h-full">
       <div class="container flex gap-x-5">
         <div class="testimony-text w-1/2">
           <h2 class="font-extrabold text-6xl mb-10">

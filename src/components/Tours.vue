@@ -6,15 +6,11 @@
       <h3 class="font-bold text-4xl mx-auto w-fit mb-12">POPULAR TOURS</h3>
 
       <!-- menu-cards -->
-      <ul class="menu-tour flex flex-wrap justify-between">
+      <ul class="menu-tour">
         <li v-for="tour in tours" :key="tour" class="card">
           <a href="#">
             <div class="card-image h-full">
-              <img
-                :src="tour.images[0]"
-                :alt="tour.city"
-                class="object-center object-cover h-full"
-              />
+              <img :src="tour.images[0]" :alt="tour.city" />
             </div>
             <div class="title">
               <h3 class="text-xl font-bold uppercase">{{ tour.tours[0] }}</h3>

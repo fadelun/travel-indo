@@ -34,9 +34,15 @@
       </div>
       <div class="social-media">
         <h3>Social Media</h3>
-        <a> twitter </a>
-        <a href="#">IG</a>
-        <a href="#">yt</a>
+        <a href="#"
+          ><font-awesome-icon icon="fa-brands fa-twitter" size="xl"
+        /></a>
+        <a href="#"
+          ><font-awesome-icon icon="fa-brands fa-instagram" size="xl"
+        /></a>
+        <a href="#"
+          ><font-awesome-icon icon="fa-brands fa-youtube" size="xl"
+        /></a>
       </div>
     </div>
   </footer>
