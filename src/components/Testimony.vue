@@ -1,14 +1,15 @@
 <template>
   <!-- great testimoni -->
   <div id="testimony" class="content">
-    <div class="bacgkround">
+    <div class="background">
       <div class="container">
         <div class="testimony-text">
           <h2>Where Adventure and Relaxation Meet</h2>
-          <p class="person-quote">"{{ testi[0].quote }}"</p>
-          <p class="person-name">
-            -<i>{{ testi[0].name }}</i>
-          </p>
+          <AllTestimony
+            v-for="testi in allTestimony"
+            :key="testi"
+            :testi="testi"
+          />
         </div>
         <div class="testimony-videos">
           <div class="video">
@@ -33,11 +34,15 @@
 <script>
 import { ref } from "vue";
 
+import AllTestimony from "./AllTestimony.vue";
+
 export default {
   name: "Testimony",
-
+  components: {
+    AllTestimony,
+  },
   setup() {
-    const testi = ref([
+    const allTestimony = ref([
       {
         name: "Samantha",
         quote:
@@ -56,7 +61,7 @@ export default {
     ]);
 
     return {
-      testi,
+      allTestimony,
     };
   },
 };
