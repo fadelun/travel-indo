@@ -1,7 +1,12 @@
 <template>
-  <swiper :slides-per-view="1" @swiper="onSwiper" @slideChange="onSlideChange">
-    <swiper-slide
-      ><p class="person-quote">"{{ testi.quote }}"</p>
+  <swiper
+    :modules="modules"
+    :space-between="16"
+    :loop="true"
+    :autoplay="{ delay: 3000, pauseOnMouseEnter: true }"
+  >
+    <swiper-slide v-for="testi in allTestimony" :key="testi.name">
+      <p class="person-quote">{{ testi.quote }}</p>
       <p class="person-name">
         -<i>{{ testi.name }}</i>
       </p></swiper-slide
@@ -9,15 +14,19 @@
   </swiper>
 </template>
 <script>
+import { Autoplay, Pagination } from "swiper";
+
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
 
 export default {
   name: "AllTestimony",
-  props: ["testi"],
+  props: ["allTestimony"],
   components: {
     Swiper,
     SwiperSlide,
@@ -25,13 +34,13 @@ export default {
   setup() {
     const onSwiper = (swiper) => {
       console.log(swiper);
+      //   console.log(swiper.);
     };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
+
     return {
       onSwiper,
-      onSlideChange,
+
+      modules: [Autoplay, Pagination],
     };
   },
 };

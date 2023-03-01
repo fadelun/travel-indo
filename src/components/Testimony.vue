@@ -5,11 +5,7 @@
       <div class="container">
         <div class="testimony-text">
           <h2>Where Adventure and Relaxation Meet</h2>
-          <AllTestimony
-            v-for="testi in allTestimony"
-            :key="testi"
-            :testi="testi"
-          />
+          <AllTestimony :allTestimony="allTestimony" />
         </div>
         <div class="testimony-videos">
           <div class="video">
