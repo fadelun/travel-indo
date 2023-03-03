@@ -13,7 +13,15 @@
   h1 {
     @apply font-extrabold text-7xl;
   }
+
+  h2 {
+    @apply font-extrabold text-6xl;
+  }
+
   h3 {
+    @apply font-bold text-4xl;
+  }
+  h4 {
     @apply text-xl font-bold uppercase;
   }
 
@@ -24,14 +32,10 @@
   /*====== style header ======*/
   header {
     @apply relative;
-    background: url("./images/background.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   nav {
-    @apply pt-3 bg-transparent text-white absolute inset-x-0 top-0 z-50;
+    @apply pt-3 bg-transparent text-white  absolute inset-x-0 top-0 z-50;
   }
 
   nav .wrapper-navbar {
@@ -39,7 +43,7 @@
   }
 
   nav .wrapper-navbar .menu {
-    @apply w-2/6 flex justify-between font-light;
+    @apply w-2/6 flex justify-between font-normal;
   }
 
   nav .wrapper-navbar .button {
@@ -47,11 +51,19 @@
   }
 
   header #hero {
-    @apply bg-[#0000007e] h-full pt-20 relative;
+    @apply pt-20 relative h-[94vh];
+    background: url("./images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #hero::after {
+    @apply content-[""] absolute inset-0 bg-[#00000098];
   }
 
   header #hero .container {
-    @apply h-full;
+    @apply h-full relative z-10;
   }
 
   header #hero .wrapper-title {
@@ -74,8 +86,8 @@
     @apply relative;
   }
 
-  main #tours h2 {
-    @apply font-bold text-4xl mx-auto w-fit mb-12;
+  main #tours h3 {
+    @apply mx-auto w-fit mb-12;
   }
 
   main #tours .background {
@@ -106,6 +118,9 @@
   }
   main #tours .menu-tour .wrapper-title {
     @apply text-center absolute inset-x-0 bottom-0 h-1/5;
+  }
+  main .menu-tour .title {
+    @apply font-bold uppercase;
   }
   main .menu-tour .sub-title {
     @apply text-sm capitalize;

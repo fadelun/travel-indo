@@ -3,7 +3,7 @@
   <div id="tours" class="content">
     <div class="background"></div>
     <div class="container">
-      <h2>POPULAR TOURS</h2>
+      <h3>POPULAR TOURS</h3>
 
       <!-- menu-cards -->
       <ul class="menu-tour">
@@ -13,7 +13,7 @@
               <img :src="tour.images[0]" :alt="tour.city" />
             </div>
             <div class="wrapper-title">
-              <h3 class="title">{{ tour.tours[0] }}</h3>
+              <p class="title">{{ tour.tours[0] }}</p>
               <p class="sub-title">{{ tour.city }}</p>
             </div>
           </router-link>
