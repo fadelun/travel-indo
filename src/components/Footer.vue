@@ -33,7 +33,7 @@
         </p>
       </div>
       <div class="social-media">
-        <h3>Social Media</h3>
+        <h3>Contact us</h3>
         <a href="#"
           ><font-awesome-icon icon="fa-brands fa-twitter" size="xl"
         /></a>

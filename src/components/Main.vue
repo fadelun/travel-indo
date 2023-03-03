@@ -5,8 +5,8 @@
   </main>
 </template>
 <script>
-import Tours from "@/components/Tours.vue";
-import Testimony from "@/components/Testimony.vue";
+import Tours from "./Tours.vue";
+import Testimony from "./Testimony.vue";
 
 export default {
   name: "Main",

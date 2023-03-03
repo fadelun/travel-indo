@@ -30,19 +30,19 @@
     background-repeat: no-repeat;
   }
 
-  header nav {
+  nav {
     @apply pt-3 bg-transparent text-white absolute inset-x-0 top-0 z-50;
   }
 
-  header nav .wrapper-navbar {
+  nav .wrapper-navbar {
     @apply flex justify-between h-16 items-center border-b-2 border-b-white;
   }
 
-  header nav .wrapper-navbar .menu {
+  nav .wrapper-navbar .menu {
     @apply w-2/6 flex justify-between font-light;
   }
 
-  header nav .wrapper-navbar .button {
+  nav .wrapper-navbar .button {
     @apply grid items-center;
   }
 

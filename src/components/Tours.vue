@@ -8,7 +8,7 @@
       <!-- menu-cards -->
       <ul class="menu-tour">
         <li v-for="tour in tours" :key="tour" class="card">
-          <a href="#">
+          <router-link to="/tour">
             <div class="card-image">
               <img :src="tour.images[0]" :alt="tour.city" />
             </div>
@@ -16,7 +16,7 @@
               <h3 class="title">{{ tour.tours[0] }}</h3>
               <p class="sub-title">{{ tour.city }}</p>
             </div>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
