@@ -161,7 +161,7 @@
 
   /*====== style footer ======*/
   footer {
-    @apply h-[400px] pt-16 bg-[#06070F] text-white;
+    @apply h-[320px] pt-16 bg-[#06070F] text-white;
   }
 
   footer .container {

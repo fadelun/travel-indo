@@ -1,18 +1,43 @@
 <template>
   <header class="bg-dark-blue">
     <Navbar />
-    <div class="hero h-[94vh] relative pt-20 container">
-      <figure class="absolute inset-0">
-        <img
-          src="../assets/images/mlg/img1.jpg"
-          class="w-full h-full object-cover"
-          alt="bromo"
-        />
+    <div class="hero h-[500px] max-h-[94vh] relative pt-20 container">
+      <figure class="images-wrapper absolute inset-0">
+        <swiper
+          :modules="modules"
+          :space-between="16"
+          :loop="true"
+          :autoplay="{ delay: 3000, pauseOnMouseEnter: true }"
+          class="w-full h-full"
+        >
+          <swiper-slide>
+            <img
+              src="../assets/images/mlg/img1.jpg"
+              class="w-full h-full object-cover"
+              alt="bromo"
+            />
+            ></swiper-slide
+          >
+
+          <swiper-slide
+            ><img
+              src="../assets/images/mlg/img1.jpg"
+              class="w-full h-full object-cover"
+              alt="bromo"
+          /></swiper-slide>
+
+          <swiper-slide
+            ><img
+              src="../assets/images/mlg/img1.jpg"
+              class="w-full h-full object-cover"
+              alt="bromo"
+          /></swiper-slide>
+        </swiper>
       </figure>
     </div>
   </header>
-  <main class="bg-white pt-6">
-    <div class="container flex">
+  <main class="bg-white pt-6 mb-6">
+    <div class="container flex gap-4">
       <div class="content w-3/4">
         <article class="">
           <div class="header mb-4">
@@ -49,23 +74,48 @@
           </div>
         </article>
       </div>
-      <aside class="bg-purple-600 w-1/4">
+      <aside class="border-2 border-slate-400 rounded-lg w-1/4 py-5 px-4">
         Gallery of images
         <div class="gallery-images">...</div>
       </aside>
     </div>
   </main>
-  <!-- <Footer /> -->
+  <Footer />
 </template>
 <script>
+import { Autoplay, Pagination } from "swiper";
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
+
 import Navbar from "@/components/Navbar.vue";
-// import Footer from "@/components/Footer.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "Tour",
   components: {
     Navbar,
-    // Footer,
+    Footer,
+
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+      //   console.log(swiper.);
+    };
+
+    return {
+      onSwiper,
+
+      modules: [Autoplay, Pagination],
+    };
   },
 };
 </script>
