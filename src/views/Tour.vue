@@ -1,13 +1,14 @@
 <template>
   <header class="bg-dark-blue">
     <Navbar />
-    <div class="hero h-[500px] max-h-[94vh] relative pt-20 container">
+    <div class="hero h-[580px] max-h-[94vh] relative pt-20">
       <figure class="images-wrapper absolute inset-0">
         <swiper
           :modules="modules"
           :space-between="16"
           :loop="true"
           :autoplay="{ delay: 3000, pauseOnMouseEnter: true }"
+          navigation
           class="w-full h-full"
         >
           <swiper-slide>
@@ -32,6 +33,8 @@
               class="w-full h-full object-cover"
               alt="bromo"
           /></swiper-slide>
+          <!-- <div class="swiper-button-next" @click="swiper.slideNext()">next</div> -->
+          <!-- <div class="swiper-button-prev" @click="swiper.slidePrev()">prev</div> -->
         </swiper>
       </figure>
     </div>
@@ -83,15 +86,15 @@
   <Footer />
 </template>
 <script>
-import { Autoplay, Pagination } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 // Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/vue";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
@@ -104,17 +107,19 @@ export default {
 
     Swiper,
     SwiperSlide,
+    useSwiper,
   },
   setup() {
     const onSwiper = (swiper) => {
       console.log(swiper);
-      //   console.log(swiper.);
     };
 
+    const swiper = useSwiper();
+    // masih ada proble pada navigation
     return {
       onSwiper,
-
-      modules: [Autoplay, Pagination],
+      swiper,
+      modules: [Autoplay, Navigation],
     };
   },
 };

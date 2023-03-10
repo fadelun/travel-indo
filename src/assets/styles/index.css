@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./styleSwiper.css";
 @layer components {
   /*====== style awal ======*/
   #app {
@@ -52,7 +53,7 @@
 
   header #hero {
     @apply pt-20 relative h-[94vh];
-    background: url("./images/background.jpg");
+    background: url("../images/background.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -127,7 +128,7 @@
   }
 
   main #testimony {
-    background: url("./images/background-2.jpg");
+    background: url("../images/background-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
