@@ -17,6 +17,5 @@ import './assets/styles/index.css';
 
 
 library.add(fas, fab)
-// .use(router)
 createApp(App).use(router)
     .component('font-awesome-icon', FontAwesomeIcon).mount('#app')

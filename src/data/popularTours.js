@@ -2,9 +2,8 @@ import pdg1 from "../assets/images/pdg/img1.jpg"
 import pdg2 from "../assets/images/pdg/img2.jpg"
 import bdg1 from "../assets/images/bdg/img1.jpg"
 import bdg2 from "../assets/images/bdg/img2.jpg"
-import mlg1 from "../assets/images/mlg/img1.jpg"
-import mlg2 from "../assets/images/mlg/img2.jpg"
-import mlg3 from "../assets/images/mlg/img3.jpg"
+import mlg1 from "../assets/images/mlg/bromo/img1.jpg"
+
 import bt1 from "../assets/images/bt/img1.jpg"
 import bt2 from "../assets/images/bt/img2.jpg"
 import bt3 from "../assets/images/bt/img3.jpg"
@@ -30,7 +29,7 @@ const popularTours = [
         id: 3,
         city: "malang",
         desc: "Kota Malang, adalah salah satu kota yang berada di provinsi Jawa Timur. biasanya jika ada karyawisata ke Jawa Timur, maka tidak akan pernah ketinggalan untuk berkunjung di kota satu ini. Malang yang juga dikenal sebagai Kota Batu merupakan kota yang berada di wilayah perbukitan, sehingga kota ini memiliki udara yang sejuk seperti Bandung. Jika kita ingin bertanya apa saja tempat wisata di Malang maka kita akan merasa takjub karena saking banyaknya. Banyak sekali tempat wisata di Malang, mulain dari perkebunan hingga taman hiburan. Malang memang mempunyai tanaman yang khas, yakni buah apel. Saking banyaknya hingga ada sebuatan Apel Malang. Apel Malang ini adalah buah apel yang berwarna hijau dan ukurannya tidak terlalu besar. Ada banyak sekali pohon apel yang tumbuh di Malang sehingga perkebunan apel pun dijadikan tempat wisata. Selain perkebunan apel, ada pula perkebunan teh dan bahkan taman bunga.",
-        images: [mlg1, mlg2, mlg3],
+        images: [mlg1],
         tours: ["gunung bromo"]
 
     },
